@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClaimsAI Ops - Claims Queue</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">ClaimsAI Ops</div>
+      <div class="subtitle">Healthcare Claims Automation</div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a class="active" href="claims.html">Claims Queue</a>
+        <a href="ai-requirements.html">AI Requirements</a>
+        <a href="fraud-alerts.html">Fraud Alerts</a>
+        <a href="reports.html">Reports</a>
+        <a href="administration.html">Administration</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div class="title">
+          <h1>Claims Queue</h1>
+          <p>Operational view of claim status, routing, risk, and ownership</p>
+        </div>
+        <div class="status">2,143 claims processed today</div>
+      </div>
+      <section class="panel">
+        <h3 class="section-title">Active Claims Worklist</h3>
+        <table>
+          <thead><tr><th>Claim ID</th><th>Type</th><th>Status</th><th>Risk</th><th>Owner</th><th>SLA</th></tr></thead>
+          <tbody>
+            <tr><td>CLM-10241</td><td>Inpatient</td><td><span class="pill success">Auto Approved</span></td><td>Low</td><td>System</td><td>On Track</td></tr>
+            <tr><td>CLM-10255</td><td>Outpatient</td><td><span class="pill warn">Pending Review</span></td><td>Medium</td><td>Ops Team A</td><td>4 hrs left</td></tr>
+            <tr><td>CLM-10277</td><td>Specialty</td><td><span class="pill danger">Fraud Hold</span></td><td>High</td><td>Compliance</td><td>Escalated</td></tr>
+            <tr><td>CLM-10290</td><td>Pharmacy</td><td><span class="pill success">Paid</span></td><td>Low</td><td>Finance</td><td>Completed</td></tr>
+            <tr><td>CLM-10302</td><td>Emergency</td><td><span class="pill warn">Exception Queue</span></td><td>Medium</td><td>Ops Team B</td><td>6 hrs left</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="grid two-col">
+        <div class="panel">
+          <h3 class="section-title">Queue Insights</h3>
+          <div class="kpi-list">
+            <div class="kpi-item"><strong>Auto-Processed</strong>78% of incoming claims are adjudicated without manual intervention.</div>
+            <div class="kpi-item"><strong>Exception Volume</strong>Highest exception drivers: missing provider ID, invalid procedure code, duplicate claim submission.</div>
+            <div class="kpi-item"><strong>Operational Focus</strong>Prioritize specialty and emergency claims with high-risk flags and approaching SLA thresholds.</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3 class="section-title">Queue Actions</h3>
+          <div class="action-list">
+            <div class="action-item"><strong>Action 1</strong>Reassign high-risk claims older than 24 hours to senior reviewers.</div>
+            <div class="action-item"><strong>Action 2</strong>Review incomplete submissions from top 5 provider sources.</div>
+            <div class="action-item"><strong>Action 3</strong>Validate exception routing accuracy after latest rules update.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

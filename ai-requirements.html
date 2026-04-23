@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClaimsAI Ops - AI Requirements</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">ClaimsAI Ops</div>
+      <div class="subtitle">Healthcare Claims Automation</div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="claims.html">Claims Queue</a>
+        <a class="active" href="ai-requirements.html">AI Requirements</a>
+        <a href="fraud-alerts.html">Fraud Alerts</a>
+        <a href="reports.html">Reports</a>
+        <a href="administration.html">Administration</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div class="title">
+          <h1>AI Requirements Builder</h1>
+          <p>AI-assisted generation of BRDs, user stories, acceptance criteria, and risk prompts</p>
+        </div>
+        <div class="status">Requirements cycle time ↓ 35%</div>
+      </div>
+      <section class="grid two-col">
+        <div class="panel">
+          <h3 class="section-title">Requirements Generation Flow</h3>
+          <div class="builder-box"><h4>Stakeholder Input</h4><p>“Claims processors spend too much time reviewing incomplete claims before adjudication.”</p></div>
+          <div class="builder-box"><h4>Generated Business Need</h4><p>Automate claim completeness validation at intake to reduce manual review effort, improve SLA performance, and prevent downstream rework.</p></div>
+          <div class="builder-box"><h4>Generated User Story</h4><p><strong>As a</strong> claims processor, <strong>I want</strong> incomplete claims to be auto-flagged at intake <strong>so that</strong> manual review time is reduced.</p></div>
+          <div class="builder-box"><h4>Suggested Acceptance Criteria</h4>
+            <ul>
+              <li>Missing member ID routes claim to exception queue</li>
+              <li>Missing provider ID blocks adjudication</li>
+              <li>Incomplete coding triggers alert and SLA timer</li>
+              <li>Exception reason is logged in audit trail</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel">
+          <h3 class="section-title">AI-Generated Delivery Support</h3>
+          <div class="builder-box"><h4>Dependency Suggestions</h4>
+            <ul>
+              <li>Provider portal data quality controls</li>
+              <li>Eligibility API response validation</li>
+              <li>Claims rules configuration governance</li>
+            </ul>
+          </div>
+          <div class="builder-box"><h4>Risk Suggestions</h4>
+            <ul>
+              <li>Increase in exception volume during rollout</li>
+              <li>Operations team training needs on new statuses</li>
+              <li>Potential false positives in incomplete claim detection</li>
+            </ul>
+          </div>
+          <div class="builder-box"><h4>Generated UAT Scenario</h4><p>When a claim is submitted without provider ID, the system must block adjudication, assign exception category, and notify assigned queue owner.</p></div>
+          <div class="footer-note">This page demonstrates AI-enhanced business analysis workflow in a portfolio format.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
