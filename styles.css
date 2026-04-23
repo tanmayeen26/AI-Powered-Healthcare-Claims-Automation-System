@@ -51,7 +51,7 @@ th { color:var(--muted); font-weight:600; }
 .pill.success { background:rgba(109,211,160,.14); color:var(--success); }
 .pill.warn { background:rgba(255,200,87,.14); color:var(--warn); }
 .pill.danger { background:rgba(255,122,122,.14); color:var(--danger); }
-.portfolio-image { width:100%; border-radius:16px; border:1px solid var(--border); box-shadow:var(--shadow); margin-top:12px; background:#0f1727; }
+.portfolio-image { width: 100%; max-width: 900px;   /* prevents stretching */ display: block; margin: 0 auto; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow);}
 .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:16px; }
 .button-link { display:inline-block; padding:10px 14px; border-radius:12px; text-decoration:none; border:1px solid var(--border); background:var(--panel-2); color:var(--text); }
 .button-link.primary { background:#17365e; border-color:#2a4f84; }
